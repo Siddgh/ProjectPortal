@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/projectListFragment">
+
+    <fragment
+        android:id="@+id/projectListFragment"
+        android:name="edu.projectportal.fragments.ProjectListFragment"
+        android:label="ProjectListFragment">
+        <action
+            android:id="@+id/action_projectListFragment_to_editFragment2"
+            app:destination="@id/editFragment2" />
+        <action
+            android:id="@+id/action_projectListFragment_to_detailFragment2"
+            app:destination="@id/detailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment2"
+        android:name="edu.projectportal.fragments.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit">
+        <action
+            android:id="@+id/action_editFragment2_to_projectListFragment"
+            app:destination="@id/projectListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment2"
+        android:name="edu.projectportal.fragments.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/action_detailFragment2_to_editFragment2"
+            app:destination="@id/editFragment2" />
+    </fragment>
+</navigation>
